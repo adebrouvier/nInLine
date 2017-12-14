@@ -11,11 +11,11 @@
 
 COMPILER=gcc
 OUTPUT_FILE=nInLine.out
-FILES=nInLineFront.c nInLineBack.c nInLineBack.h rand.a getnum2.c getnum.h
+FILES=nInLineFront.c nInLineBack.c nInLineBack.h rand.a getnum2.a getnum.h
 PARAMETERS=-o
 
 all:
-#	make getnum
+	make getnum
 	make rand
 	$(COMPILER) $(PARAMETERS) $(OUTPUT_FILE) $(FILES)
 
@@ -30,4 +30,4 @@ rand:
 	ranlib rand.a
 
 clean:
-	rm $(OUTPUT_FILE)	
+	rm -f $(OUTPUT_FILE) *.o *.a
